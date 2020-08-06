@@ -1,0 +1,16 @@
+server:
+  port: 12002
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/huangzhi1234/springcloud.git
+eureka:
+  client:
+    service-url:
+      defaultZone : http://106.52.187.176:8761/eureka/
+
+
