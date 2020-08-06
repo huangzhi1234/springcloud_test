@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/huangzhi1234/springcloud.git
+          uri: https://github.com/huangzhi1234/springcloud_test.git
 eureka:
   client:
     service-url:

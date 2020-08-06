@@ -4,7 +4,7 @@ spring:
   application:
     name: book
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/wykt?characterEncoding=UTF8
+    url: jdbc:mysql://106.52.187.176:3306/wykt?characterEncoding=UTF8
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 123456
