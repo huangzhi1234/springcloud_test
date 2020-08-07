@@ -1,0 +1,37 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: user
+  datasource:
+    url: jdbc:mysql://106.52.187.176:3306/wykt?characterEncoding=UTF8
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    initial-size: 1
+    max-active: 10
+    min-idle: 1
+    max-wait: 27000
+    validation-query: select 1
+    time-between-connect-error-millis: 60000
+    min-evictable-idle-time-millis: 300000
+    test-on-borrow: true
+    test-while-idle: true
+    pool-prepared-statements: true
+    max-pool-prepared-statement-per-connection-size: 20
+    jpa:
+      database: mysql
+      show-sql: true
+      generate-ddl: true #是否生成表结构
+
+eureka:
+  instance:
+    prefer-ip-address: true #优先使用ip地址注册到eureka
+  client:
+    register-with-eureka: true #消费方不是必须注册到eureka
+    fetch-registry: true
+    service-url:
+      #defaultZone : http://localhost:8761/eureka/,http://localhost:8762/eureka/
+      defaultZone : http://106.52.187.176:8761/eureka
+    registry-fetch-interval-seconds: 5 #刷新注册信息的间隔时间
