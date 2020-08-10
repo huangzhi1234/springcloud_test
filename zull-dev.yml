@@ -26,7 +26,7 @@ zull:
     connect-timeout-millis: 3000
     socket-timeout-millis: 3000
   rotues:
-    microserver-user:
+    book:
       path: /book #需要转发的路径
       serviceId: book #最终需要转发微服务的名称
     microserver-movie:
