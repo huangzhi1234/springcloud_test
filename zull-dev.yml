@@ -16,6 +16,11 @@ eureka:
     registry-fetch-interval-seconds: 5 #刷新注册信息的间隔时间
 
 #如果转发路径与微服务的名称是一样的，这段配置完全不需要配置
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
+
 zull:
   host:
     connect-timeout-millis: 3000
