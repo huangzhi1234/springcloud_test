@@ -7,13 +7,14 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true #优先使用ip地址注册到eureka
+    lease-renewal-interval-in-seconds: 5 #服务续约间隔为5
+    lease-expiration-duration-in-seconds: 10 #服务失效时间为10
   client:
-    register-with-eureka: true #消费方不是必须注册到eureka
+    register-with-eureka: true
     fetch-registry: true
     service-url:
       #defaultZone : http://localhost:8761/eureka/,http://localhost:8762/eureka/
       defaultZone : http://106.52.187.176:8761/eureka
-    registry-fetch-interval-seconds: 5 #刷新注册信息的间隔时间
 
 #如果转发路径与微服务的名称是一样的，这段配置完全不需要配置
 ribbon:
@@ -26,12 +27,12 @@ zull:
     connect-timeout-millis: 3000
     socket-timeout-millis: 3000
   rotues:
-    book:
+    book: #需要转发的微服务名称
       path: /book #需要转发的路径
       serviceId: book #最终需要转发微服务的名称
-    microserver-movie:
+    order:
       path: /order #需要转发的路径
       serviceId: order #最终需要转发微服务的名称
-    microserver-pay:
+    user:
       path: /user #需要转发的路径
       serviceId: user #最终需要转发微服务的名称
