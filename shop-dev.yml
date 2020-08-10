@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  resources:
+    static-locations: classpath:/
+  mvc:
+    static-path-pattern=/**
+  redis:
+      database: 0
+      host: 106.52.187.176
+      port: 6379
+      password:
+      pool:
+      max-active: 200
+      max-wait: -1
+      max-idle: 10
+      min-idle: 0
