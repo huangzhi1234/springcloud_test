@@ -28,11 +28,5 @@ zuul:
     socket-timeout-millis: 3000
   routes:
     book: #需要转发的微服务名称
-      path: /book #需要转发的路径
+      path: /book/** #需要转发的路径
       serviceId: book #最终需要转发微服务的名称
-    order:
-      path: /order/** #需要转发的路径
-      url: order #最终需要转发微服务的名称
-    user:
-      path: /user #需要转发的路径
-      serviceId: user #最终需要转发微服务的名称
